@@ -81,6 +81,7 @@ const psicologosController = {
         res.status(400).json("Não foi possível atualizar o psicólogo");
         }
     },
+    
     countPsicologos: async (req, res) => {
         try {
           const psicologos = await Psicologos.count();

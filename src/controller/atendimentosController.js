@@ -74,6 +74,7 @@ const atendimentosController = {
       console.error(error);
     }
   },
+  
   averageAtendimentos: async (req,res) => {
     try {
       const atendimentos = await Atendimentos.count()
