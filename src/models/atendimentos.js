@@ -1,6 +1,7 @@
 const {db} = require('../database/config');
 const { DataTypes } = require('sequelize');
-const {Psicologos, Pacientes} = require('./index')
+const Psicologos = require('./psicologos');
+const Pacientes = require('./pacientes');
 
 const atendimentos = db.define("atendimentos", {
     id: {
@@ -31,8 +32,7 @@ const atendimentos = db.define("atendimentos", {
 },
 {
     tableName: "atendimentos",
-    createdAt: false,
-    updatedAt: false
+    timestamps: false,
 });
 
 module.exports = atendimentos;
