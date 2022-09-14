@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+/*const { Atendimentos, Pacientes, Psicologos } = require("../models/index");
+=======
 const { Atendimentos, Pacientes } = require("../models");
+>>>>>>> main
 
 const atendimentosController = {
   listAtendimento: async (req, res) => {
@@ -49,4 +53,8 @@ const atendimentosController = {
   }
 };
 
+<<<<<<< HEAD
+module.exports = atendimentoController;*/
+=======
 module.exports = atendimentosController;
+>>>>>>> main

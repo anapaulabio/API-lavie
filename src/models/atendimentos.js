@@ -1,6 +1,13 @@
+<<<<<<< HEAD
+/*const db = require("../database/config");
+const { DataTypes } = require("sequelize");
+const Pacientes = require("./pacientes");
+const Psicologos = require("./psicologos");
+=======
 const {db} = require('../database/config');
 const { DataTypes } = require('sequelize');
 const { Pacientes } = require('./index')
+>>>>>>> main
 
 const atendimentos = db.define("atendimentos", {
     id: {
@@ -28,4 +35,9 @@ const atendimentos = db.define("atendimentos", {
     updatedAt: false
 });
 
+<<<<<<< HEAD
+
+module.exports = atendimentos;*/
+=======
 module.exports = atendimentos;
+>>>>>>> main

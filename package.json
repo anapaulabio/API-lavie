@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/anapaulabio/API-laVie#readme",
   "dependencies": {
+<<<<<<< HEAD
+    "bcrypt": "^5.0.1",
+=======
+>>>>>>> main
     "bcryptjs": "^2.4.3",
     "express": "^4.18.1",
     "express-jwt": "^7.7.5",
