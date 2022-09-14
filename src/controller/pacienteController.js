@@ -91,6 +91,14 @@ const pacienteController = {
         } catch (err) {
             console.error(err);
         }
+    },
+    countPacientes: async (req, res) => {
+        try {
+            const pacientes = await Pacientes.count();
+            res.json(`${pacientes} pacientes`);
+            } catch (error) {
+                console.error(error)
+            }
     }
 };
 

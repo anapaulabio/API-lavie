@@ -26,7 +26,6 @@ const authController = {
                 id: psicologo.id,
                 email: psicologo.email,
                 nome: psicologo.nome,
-                apresentacao: psicologo.apresentacao,
             },
             secret.key
         );

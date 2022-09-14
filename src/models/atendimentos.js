@@ -1,12 +1,6 @@
-const db = require("../database/config");
-const { DataTypes } = require("sequelize");
-const Pacientes = require("./pacientes");
-const Psicologos = require("./psicologos");
-
 const {db} = require('../database/config');
 const { DataTypes } = require('sequelize');
-const { Pacientes } = require('./index')
-
+const {Psicologos, Pacientes} = require('./index')
 
 const atendimentos = db.define("atendimentos", {
     id: {
@@ -19,6 +13,13 @@ const atendimentos = db.define("atendimentos", {
     },
     observacao: {
         type: DataTypes.STRING
+    },
+    psicologos_id: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: Psicologos,
+            foreignKey: 'psicologos_id'
+        }
     }, 
     pacientes_id: {
         type: DataTypes.INTEGER, 
@@ -33,6 +34,5 @@ const atendimentos = db.define("atendimentos", {
     createdAt: false,
     updatedAt: false
 });
-
 
 module.exports = atendimentos;
