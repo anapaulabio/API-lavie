@@ -11,16 +11,14 @@ create table psicologos(
 	id int not null auto_increment primary key unique,
     nome varchar(80) not null,
     email varchar(50) not null unique,
-    senha varchar(10) not null,
+    senha varchar(244) not null,
     apresentacao text not null
 );
 create table atendimentos(
 	id int not null auto_increment primary key unique,
     data_atendimento date not null,
     observacao text,
-    psicologos_id int not null,
     pacientes_id int not null,
-    constraint psicologos_atendimentos foreign key (psicologos_id) references psicologos(id),
     constraint pacientes_atendimentos foreign key (pacientes_id) references pacientes(id)
 );
 
@@ -42,5 +40,5 @@ insert into psicologos values
     
     
 insert into atendimentos values
-	(null, '2022-11-25', 'chegue na hora', 2,1),
-    (null, '2022-11-25', 'chegue na hora', 1,1);
+	(null, '2022-11-25', 'paciente estável', 1),
+    (null, '2022-11-25', 'paciente com transtorno bipolar', 1);

@@ -18,11 +18,20 @@
   },
   "homepage": "https://github.com/anapaulabio/API-laVie#readme",
   "dependencies": {
+<<<<<<< HEAD
     "bcrypt": "^5.0.1",
+=======
+>>>>>>> main
     "bcryptjs": "^2.4.3",
     "express": "^4.18.1",
+    "express-jwt": "^7.7.5",
+    "express-validation": "^4.1.0",
+    "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.3.3",
-    "nodemon": "^2.0.19",
     "sequelize": "^6.21.6"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "nodemon": "^2.0.19"
   }
 }
