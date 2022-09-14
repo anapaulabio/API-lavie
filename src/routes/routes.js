@@ -28,6 +28,10 @@ routes.delete('/pacientes/:id',pacienteController.deletarPaciente);
 
 routes.post("/login", authLoginValidation, authController.login);
 
+routes.get('/dashboard/numero-paciente', pacientesController.countPacientes);
+routes.get('/dashboard/numero-psicologo', psicologosController.countPsicologos);
+routes.get('/dashboard/numero-atendimentos', atendimentosController.countAtendimentos);
+routes.get('/dashboard/media-atendimentos', atendimentosController.averageAtendimentos);
 
 
 module.exports = routes;

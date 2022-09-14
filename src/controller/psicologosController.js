@@ -80,7 +80,15 @@ const psicologosController = {
         catch (error) {
         res.status(400).json("Não foi possível atualizar o psicólogo");
         }
-    },    
+    },
+    countPsicologos: async (req, res) => {
+        try {
+          const psicologos = await Psicologos.count();
+          res.json(`${psicologos} psicologos`);
+        } catch (error) {
+          console.error(error);
+        }
+      }  
 };
 
 module.exports = psicologosController
