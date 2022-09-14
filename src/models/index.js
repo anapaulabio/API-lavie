@@ -1,25 +1,23 @@
+const bcrypt = require("bcryptjs");
+const Psicologos = require("./psicologos");
 const Atendimentos = require('./atendimentos');
-const Pacientes = require('./pacientes');
-const Psicologos = require('./psicologos');
+const Pacientes = require('./pacientes')
+
+const senha = "123";
+const hash = bcrypt.hashSync(senha, 10);
 
 Atendimentos.belongsTo(Pacientes, {
-    foreignKey: paciente_id
-});
-
-Atendimentos.belongsTo(Psicologos, {
-    foreignKey: psicologo_id
+    foreignKey: 'pacientes_id'
 });
 
 Pacientes.hasMany(Atendimentos, {
-    foreignKey: paciente_id
+    foreignKey: 'pacientes_id'
 });
 
-Psicologos.hasMany(Atendimentos, {
-    foreignKey: psicologo_id
-});
+
 
 module.exports = {
-    Atendimentos,
-    Pacientes,
-    Psicologos
-}
+  Atendimentos,
+  Pacientes,
+  Psicologos
+};
