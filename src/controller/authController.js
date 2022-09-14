@@ -1,4 +1,4 @@
-const Psicologos = require ("../models/psicologos");
+const { Psicologos } = require ("../models");
 const jwt = require ("jsonwebtoken");
 const secret = require ("../configs/secret");
 const bcrypt = require ("bcryptjs");
@@ -21,17 +21,16 @@ const authController = {
             return res.status(401).json("E-mail ou senha inválido, verifique e tente novamente");
         }
 
-        const token = jwt.sign({
-            id: psicologo.id,
-            email: psicologo.email,
-            nome: psicologo.nome,
-            apresentacao: psicologo.apresentacao,
-        },
-
-        secret.key
-
+        const token = jwt.sign(
+            {
+                id: psicologo.id,
+                email: psicologo.email,
+                nome: psicologo.nome,
+                apresentacao: psicologo.apresentacao,
+            },
+            secret.key
         );
-
+        
         return res.status(200).json(token);
     },
 };

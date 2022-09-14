@@ -26,7 +26,6 @@ const pacienteController = {
         } catch (err) {
             console.error(err);
         }
-        
     },
 
     listarPacienteId: async (req, res) => {
@@ -44,7 +43,6 @@ const pacienteController = {
         } catch (err) {
             console.error(err);
         }
-        
     },
 
     atualizarPaciente: async (req, res) => {
@@ -93,7 +91,6 @@ const pacienteController = {
         } catch (err) {
             console.error(err);
         }
-         
     }
 };
 
