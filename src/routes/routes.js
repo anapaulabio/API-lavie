@@ -1,17 +1,4 @@
 const express = require('express');
-
-<<<<<<< HEAD
-const psicologosController = require("../controller/psicologosController");
-
-const routes = express.Router();
-
-
-routes.get("/psicologos", psicologosController.listPsychologists);
-routes.get("/psicologos/:id", psicologosController.listPsychologistsID);
-routes.post("/psicologos", psicologosController.createPsychologist);
-routes.delete("/psicologos/:id", psicologosController.deletePsychologist)
-routes.put("/psicologos/:id", psicologosController.updatePsychologist);
-=======
 const pacienteController = require('../controller/pacienteController');
 const psicologosController = require("../controller/psicologosController");
 const atendimentosController = require('../controller/atendimentosController');
@@ -23,10 +10,11 @@ const auth = require ("../middlewares/auth");
 
 const routes = express.Router();
 
-routes.get("/psicologos/", auth, psicologosController.listarPsicologos);
-routes.post("/psicologos/", psicologosCreateValidation, psicologosController.cadastrarPsicologos);
-routes.put("/psicologos/:id", auth, psicologosCreateValidation, psicologosController.atualizarPsicologos);
-routes.delete("/psicologos/:id", auth, psicologosController.deletarPsicologos);
+routes.get("/psicologos", psicologosController.listPsychologists);
+routes.get("/psicologos/:id", psicologosController.listPsychologistsID);
+routes.post("/psicologos", psicologosController.createPsychologist);
+routes.delete("/psicologos/:id", psicologosController.deletePsychologist)
+routes.put("/psicologos/:id", psicologosController.updatePsychologist);
 
 routes.get('/atendimentos', atendimentosController.listAtendimento);
 routes.get('/atendimentos/:id', atendimentosController.listOne);
@@ -39,7 +27,7 @@ routes.put('/pacientes/:id',pacienteController.atualizarPaciente);
 routes.delete('/pacientes/:id',pacienteController.deletarPaciente);
 
 routes.post("/login", authLoginValidation, authController.login);
->>>>>>> main
+
 
 
 module.exports = routes;
