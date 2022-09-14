@@ -1,4 +1,4 @@
-const { Atendimentos, Pacientes, Psicologos } = require("../models/index");
+/*const { Atendimentos, Pacientes, Psicologos } = require("../models/index");
 
 const atendimentoController = {
   listAtendimentos: async (req, res) => {
@@ -44,4 +44,4 @@ const atendimentoController = {
   }
 };
 
-module.exports = atendimentoController;
+module.exports = atendimentoController;*/

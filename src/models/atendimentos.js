@@ -1,4 +1,4 @@
-const db = require("../database/config");
+/*const db = require("../database/config");
 const { DataTypes } = require("sequelize");
 const Pacientes = require("./pacientes");
 const Psicologos = require("./psicologos");
@@ -35,4 +35,4 @@ const atendimentos = db.define({
 });
 
 
-module.exports = atendimentos;
+module.exports = atendimentos;*/
