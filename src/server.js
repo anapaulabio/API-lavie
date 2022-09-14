@@ -1,7 +1,7 @@
 const express = require('express');
-const { hasConection } = require('../src/database/config');
+const { hasConection } = require('./database/config');
 const handleError = require ("./middlewares/handleError");
-const routes = require('../src/routes/routes');
+const routes = require('./routes/routes');
 
 const app = express();
 
