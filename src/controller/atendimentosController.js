@@ -1,6 +1,4 @@
-const { Atendimentos, Pacientes, Psicologos } = require("../models/index");
-
-const { Atendimentos, Pacientes } = require("../models");
+const { Atendimentos, Pacientes, Psicologos } = require("../models");
 
 const atendimentosController = {
   listAtendimento: async (req, res) => {
@@ -11,14 +9,16 @@ const atendimentosController = {
             model: Pacientes,
           }
       });
-      return res.json(atendimentos);
-    } catch (error) {
-      console.error(error);
+      res.status(200).json(atendimentos);
     }
+    catch (error) {
+      console.error(error);
+    };
   },
+
   listOne: async (req, res) => {
-    const { id } = req.params;
     try {
+      const { id } = req.params;
       const atendimento = await Atendimentos.findByPk(id, {
         include:
           {
@@ -26,26 +26,29 @@ const atendimentosController = {
           }
       });
       if(!atendimento){
-        return res.status(400).json("Identificador não encontrado")
+        res.status(400).json("Identificador não encontrado")
       } else {
-        return res.json(atendimento)
+        res.status(200).json(atendimento)
       }     
-    } catch (error) {
-        console.error(error)
     }
+    catch (error) {
+        console.error(error)
+    };
   },
+
   registerAtendimento: async (req, res) => {
     console.log(req.auth)
 
-    const { data_atendimento, observacao, pacientes_id } = req.body;
     try {
+      const { data_atendimento, observacao, pacientes_id } = req.body;
       const newAtendimento = await Atendimentos.create({
         data_atendimento,
         observacao,
         pacientes_id,
       });
       res.status(201).json(newAtendimento)
-    } catch (error) {
+    }
+    catch (error) {
       console.error(error)
     }
   }
