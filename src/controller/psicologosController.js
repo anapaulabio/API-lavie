@@ -56,7 +56,7 @@ const psicologosController = {
             if (!psicologoID) {
                 return res.status(404).json("Não há um psicólogo com esse ID" + id);}
 
-            res.status(204).json(`O id: ${id} foi deletado com sucesso`);
+            res.sendStatus(204);
         }
         catch (error) {
                 console.error(error);
@@ -69,16 +69,18 @@ const psicologosController = {
             const { nome, email, senha, apresentacao } = req.body;
             const novaSenha = bcrypt.hashSync(senha, 10);
             const psicologoID = await Psicologos.findByPk(id);
+            if (!psicologoID) {
+                res.status(404).json("Não há um psicólogo com este id " + id);
+            }
+            else {
             const atualizarPsicologo = await Psicologos.update({ nome, email, senha: novaSenha, apresentacao, },
             {
                 where: {
                 id,
                 },
             });
-            if (!psicologoID) {
-                res.status(404).json("Não há um psicólogo com este id " + id);
-            }
             res.status(200).json(atualizarPsicologo)
+            }
         }
         catch (error) {
         res.status(400).json("Não foi possível atualizar o psicólogo");

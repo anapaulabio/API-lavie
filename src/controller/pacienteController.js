@@ -83,7 +83,7 @@ const pacienteController = {
                         id,
                     },
                 });
-                res.status(204);
+                res.sendStatus(204);
             } else {
                 res.status(404).json('Id não encontrado');
             }
@@ -92,7 +92,7 @@ const pacienteController = {
             console.error(err);
         }
     },
-    
+
     countPacientes: async (req, res) => {
         try {
             const pacientes = await Pacientes.count();
