@@ -1,4 +1,4 @@
-const { Atendimentos, Pacientes, Psicologos } = require("../models/index");
+const { Atendimentos, Pacientes, Psicologos } = require("../models");
 
 const atendimentosController = {
   listAtendimento: async (req, res) => {
@@ -74,6 +74,7 @@ const atendimentosController = {
       console.error(error);
     }
   },
+
   averageAtendimentos: async (req,res) => {
     try {
       const atendimentos = await Atendimentos.count()

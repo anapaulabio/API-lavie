@@ -20,6 +20,7 @@ create table atendimentos(
     observacao text,
     pacientes_id int not null,
     constraint pacientes_atendimentos foreign key (pacientes_id) references pacientes(id)
+    constraint pacientes_atendimentos foreign key (psicologos_id) references psicologos(id)
 );
 
 

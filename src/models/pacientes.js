@@ -1,4 +1,4 @@
-const db = require('../database/config');
+const { db } = require('../database/config');
 const { DataTypes } = require('sequelize');
 
 const Pacientes = db.define(
@@ -20,10 +20,8 @@ const Pacientes = db.define(
         }
     },
     {
-        timestamps: false,
-    },
-    {
         tableName: 'pacientes',
+        timestamps: false,
     }
 );
 

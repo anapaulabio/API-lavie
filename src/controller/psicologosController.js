@@ -1,5 +1,4 @@
-
-const { Psicologos } = require("../models/index");
+const { Psicologos, Atendimentos } = require("../models");
 const bcrypt = require("bcryptjs");
 
 const psicologosController = {
@@ -18,7 +17,11 @@ const psicologosController = {
 
     async listPsychologists (req, res) {
         try {
-            const listaDosPsicologos = await Psicologos.findAll();
+            const listaDosPsicologos = await Psicologos.findAll({
+                include: {
+                    model: Atendimentos,
+                }
+            });
             res.status(200).json(listaDosPsicologos);
         }
         catch (error) {
@@ -81,6 +84,7 @@ const psicologosController = {
         res.status(400).json("Não foi possível atualizar o psicólogo");
         }
     },
+
     countPsicologos: async (req, res) => {
         try {
           const psicologos = await Psicologos.count();
