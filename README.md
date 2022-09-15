@@ -69,17 +69,17 @@ As seguintes ferramentas foram usadas na construção do projeto:
    </td>
 
 
-   <td align="center"> <img src="./src/img/ana.png"  width=100/></br><a href="https://www.linkedin.com/in/anapaulaoliveiraa/"> Ana Paula </a>
+   <td align="center" width=100> <img src="./src/img/ana.png"  width=100/></br><a href="https://www.linkedin.com/in/anapaulaoliveiraa/"> Ana Paula </a>
    </td>
 
 
-   <td align="center"> <img src="./src/img/eduardo.png" width=100/></br><a href="https://www.linkedin.com/in/eduardo-alexandre025"> Eduardo Alexandre </a>
+   <td align="center" width=100> <img src="./src/img/eduardo.png" width=100/></br><a href="https://www.linkedin.com/in/eduardo-alexandre025"> Eduardo Alexandre </a>
    </td>
 
- <td align="center"> <img src="./src/img/eraldo.jfif" width=100/> </br><a href="https://www.linkedin.com/in/eraldo-leonardo/"> Eraldo Leonardo </a>
+ <td align="center" width=100> <img src="./src/img/eraldo.jfif" width=100/> </br><a href="https://www.linkedin.com/in/eraldo-leonardo/"> Eraldo Leonardo </a>
    </td>
    
-  <td align="center"> <img src="./src/img/felipe.png" width=100/> </br><a href="https://www.linkedin.com/in/heylipemoreno"> Felipe Moreno </a>
+  <td align="center" width=100> <img src="./src/img/felipe.png" width=100/> </br><a href="https://www.linkedin.com/in/heylipemoreno"> Felipe Moreno </a>
    </td>
 
 
