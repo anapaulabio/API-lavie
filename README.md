@@ -71,3 +71,27 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 
 ---
+<table align=center>
+  <tr>
+
+   <td align="center"> <img src="./src/img/alyce.jfif" width=175/></br><a href="https://www.linkedin.com/in/alyce-monteiro/?originalSubdomain=br"> Alyce </a>
+   </td>
+
+
+   <td align="center"> <img src="#"  width=175/></br><a href="https://www.linkedin.com/in/anapaulaoliveiraa/"> Ana Paula </a>
+   </td>
+
+
+   <td align="center"> <img src="#" width=175/></br><a href="https://www.linkedin.com/in/eduardo-alexandre025"> Eduardo Alexandre </a>
+   </td>
+
+ <td align="center"> <img src="#" width=175/> </br><a href="https://www.linkedin.com/in/eraldo-leonardo/"> Eraldo Leonardo </a>
+   </td>
+   
+  <td align="center"> <img src="#" width=175/> </br><a href="https://www.linkedin.com/in/heylipemoreno"> Felipe Moreno </a>
+   </td>
+
+
+
+  </tr>
+</table> </h2>
