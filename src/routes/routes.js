@@ -5,6 +5,8 @@ const atendimentosController = require('../controller/atendimentosController');
 const authController = require ("../controller/authController");
 
 const psicologosCreateValidation = require ("../validations/create");
+const pacientesCreateValidation = require ("../validations/pacienteCreate");
+const ateCreateValidation = require ("../validations/atendimentoCreate");
 const authLoginValidation = require ("../validations/login");
 const auth = require ("../middlewares/auth");
 
@@ -13,20 +15,20 @@ const routes = express.Router();
 /* - CRUD - Psicólogos - */
 routes.get("/psicologos", psicologosController.listPsychologists);
 routes.get("/psicologos/:id", psicologosController.listPsychologistsID);
-routes.post("/psicologos",psicologosCreateValidation,psicologosController.createPsychologist);
-routes.put("/psicologos/:id", psicologosController.updatePsychologist);
+routes.post("/psicologos",psicologosCreateValidation, psicologosController.createPsychologist);
+routes.put("/psicologos/:id",psicologosCreateValidation , psicologosController.updatePsychologist);
 routes.delete("/psicologos/:id", psicologosController.deletePsychologist)
 
 /* - CRUD - Atendimentos - */
 routes.get('/atendimentos', atendimentosController.listAtendimento);
 routes.get('/atendimentos/:id', atendimentosController.listOne);
-routes.post('/atendimentos', auth, atendimentosController.registerAtendimento);
+routes.post('/atendimentos',ateCreateValidation, auth, atendimentosController.registerAtendimento);
 
 /* - CRUD - Pacientes - */
-routes.post('/pacientes',pacientesController.cadastrarPaciente);
+routes.post('/pacientes',pacientesCreateValidation,pacientesController.cadastrarPaciente);
 routes.get('/pacientes',pacientesController.listarPacientes);
 routes.get('/pacientes/:id',pacientesController.listarPacienteId);
-routes.put('/pacientes/:id',pacientesController.atualizarPaciente);
+routes.put('/pacientes/:id',pacientesCreateValidation,pacientesController.atualizarPaciente);
 routes.delete('/pacientes/:id',pacientesController.deletarPaciente);
 
 /* - Dashboard - */
