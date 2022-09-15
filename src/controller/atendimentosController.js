@@ -79,7 +79,7 @@ const atendimentosController = {
     try {
       const atendimentos = await Atendimentos.count()
       const psicologos = await Psicologos.count()
-      res.json(`Nossa média de atendimentos por psicologos é igual a ${atendimentos / psicologos}`)
+      res.json(`Nossa média de atendimentos por psicologos é igual a ${(atendimentos / psicologos).toFixed(2)}`)
     } catch (error) {
       console.error(error)
     }
