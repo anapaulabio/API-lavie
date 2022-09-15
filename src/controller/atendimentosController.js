@@ -32,7 +32,7 @@ const atendimentosController = {
         ],
       });
       if (!atendimento) {
-        return res.status(400).json("Identificador não encontrado");
+        return res.status(404).json('Id não encontrado');
       } else {
         return res.json(atendimento);
       }

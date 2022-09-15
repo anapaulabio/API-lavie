@@ -1,11 +1,9 @@
-const { Pacientes } = require('../models');
+const { Atendimentos , Pacientes } = require('../models');
 
 const pacienteController = {
     cadastrarPaciente: async (req, res) => {
         try {
             const {nome, email, idade} = req.body;
-            if(!nome || !email || !idade) return res.status(400).json('Preencha todos os campos!');
-
             const novoPaciente = await Pacientes.create({
                 nome,
                 email,
@@ -20,8 +18,11 @@ const pacienteController = {
 
     listarPacientes: async (req, res) => {
         try {
-            const listarPacientes = await Pacientes.findAll();
-
+            const listarPacientes = await Pacientes.findAll({
+                include: {
+                    model: Atendimentos,
+                }
+            });
             res.status(200).json(listarPacientes);
         } catch (err) {
             console.error(err);
@@ -52,8 +53,7 @@ const pacienteController = {
             const pacienteId = await Pacientes.findByPk(id);
         
             if (pacienteId !== null) {
-                if(!nome || !email || !idade) return res.status(400).json('Preencha todos os campos!');
-                const pacienteAtualizado = await Pacientes.update({
+                await Pacientes.update({
                     nome,
                     email,
                     idade,
@@ -63,7 +63,7 @@ const pacienteController = {
                         id,
                     },
                 });
-                res.status(200).json(pacienteAtualizado)
+                res.status(200).json(pacienteId)
             }
             else {
                 res.status(404).json('Id não encontrado.')
@@ -76,14 +76,23 @@ const pacienteController = {
     deletarPaciente: async (req, res) => {
         try {
             const { id } = req.params;
-            const pacienteId = await Pacientes.findByPk(id);
+            const pacienteId = await Pacientes.findByPk(id, {
+                include: {
+                    model: Atendimentos,
+                },
+            });
             if (pacienteId !== null) {
-                await Pacientes.destroy({
-                    where: {
-                        id,
-                    },
-                });
-                res.sendStatus(204);
+                if (pacienteId.atendimentos.length === 0) {
+                    await Pacientes.destroy({
+                        where: {
+                            id,
+                        },
+                    });
+                    res.sendStatus(204);
+                }
+                else {
+                    res.status(401).json('Cadastro de paciente não pode ser deletado pois possui atendimentos agendados.');
+                }
             } else {
                 res.status(404).json('Id não encontrado');
             }
