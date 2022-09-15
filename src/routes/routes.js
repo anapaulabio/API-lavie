@@ -22,7 +22,7 @@ routes.delete("/psicologos/:id", psicologosController.deletePsychologist)
 /* - CRUD - Atendimentos - */
 routes.get('/atendimentos', atendimentosController.listAtendimento);
 routes.get('/atendimentos/:id', atendimentosController.listOne);
-routes.post('/atendimentos',ateCreateValidation, auth, atendimentosController.registerAtendimento);
+routes.post('/atendimentos',ateCreateValidation, auth, atendimentosController.createAtendimento);
 
 /* - CRUD - Pacientes - */
 routes.post('/pacientes',pacientesCreateValidation,pacientesController.cadastrarPaciente);

@@ -40,17 +40,17 @@ const atendimentosController = {
       console.error(error);
     }
   },
-  registerAtendimento: async (req, res) => {
+  createAtendimento: async (req, res) => {
     console.log(req.auth);
 
-    const { data_atendimento, observacao, pacientes_id, psicologos_id } =
-      req.body;
+    const { data_atendimento, observacao, psicologos_id, pacientes_id } =
+      req.body; 
     try {
       const newAtendimento = await Atendimentos.create({
         data_atendimento,
         observacao,
-        pacientes_id,
         psicologos_id,
+        pacientes_id
       });
       res.status(201).json(newAtendimento);
     } catch (error) {
