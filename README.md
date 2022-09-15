@@ -22,7 +22,7 @@
 ---
 
 <div align="center">
-<p>:point_down: Clique aqui :point_down:  </p> 
+
  <h2>   Documentação da API La Vie </h2>
 <p>Disponível projeto, pode ser acesso pelo Live Server</p>
 
