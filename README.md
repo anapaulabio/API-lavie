@@ -65,7 +65,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 <table align=center>
   <tr>
 
-   <td align="center"> <img src="./src/img/alyce.jfif" width=100/></br><a href="https://www.linkedin.com/in/alyce-monteiro/?originalSubdomain=br"> Alyce </a>
+   <td align="center"> <img src="./src/img/alyce.jfif" width=100/></br><a href="https://www.linkedin.com/in/alyce-monteiro/?originalSubdomain=br"> Alyce Monteiro</a>
    </td>
 
 
