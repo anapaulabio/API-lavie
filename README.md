@@ -55,7 +55,9 @@ $ npm run dev
 
  ## :file_folder:   Documentação da API La Vie 
 <br>
-Link da [API - La Vie](https://dualexandre.github.io/api-lavie-gama-academy-xp44/)
+
+<a href="https://dualexandre.github.io/api-lavie-gama-academy-xp44/" target="_blank">Link da API - La Vie</a>
+
 <br>
 
 <img src="./src/img/doc.png" alt="">
