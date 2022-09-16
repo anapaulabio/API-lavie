@@ -54,7 +54,9 @@ $ npm run dev
 
 
  ## :file_folder:   Documentação da API La Vie 
-Para reprodução da documentação da API, inicie o Live Server no arquivo index.html da pasta /docs.
+Para reprodução da documentação da API, inicie o Live Server no arquivo index.html da pasta /docs. 
+
+
 <img src="./src/img/doc.png" alt="">
 
 ---
@@ -97,7 +99,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
    </td>
 
 
-   <td align="center" width=150> <img src="./src/img/ana.png"  width=100/></br><a href="https://www.linkedin.com/in/anapaulaoliveiraa/"> Ana Paula </a>
+   <td align="center" width=150> <img src="./src/img/ana.png"  width=100/></br><a href="https://www.linkedin.com/in/anapaulaoliveiraa/"> Ana Paula Oliveira </a>
    </td>
 
 
