@@ -54,8 +54,9 @@ $ npm run dev
 
 
  ## :file_folder:   Documentação da API La Vie 
-Para reprodução da documentação da API, inicie o Live Server no arquivo index.html da pasta /docs. 
-
+<br>
+Link da [API - La Vie](https://dualexandre.github.io/api-lavie-gama-academy-xp44/)
+<br>
 
 <img src="./src/img/doc.png" alt="">
 
