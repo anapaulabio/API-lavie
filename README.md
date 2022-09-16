@@ -43,6 +43,8 @@ $ npm install
 # Verifique se a senha do seu banco SQL, está igual ao da const DB_PASS no caminho
 $ src/database/config.js
 
+# Execute o arquivo lavie.sql localizado no caminho API-lavie/src/database/mysql, no MySQL Workbench para criar o banco de dados
+
 # Execute a aplicação em modo de desenvolvimento
 $ npm run dev
 
