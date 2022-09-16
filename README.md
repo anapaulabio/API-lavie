@@ -21,13 +21,41 @@
 
 ---
 
-<div align="center">
+## Pré-requisitos
 
- <h2>   Documentação da API La Vie </h2>
-<p>Disponível projeto, pode ser acesso pelo Live Server</p>
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com/), [Node.js](https://nodejs.org/en/). 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+
+## 🎲 Rodando o Back End (servidor)
 
 
-</div>
+```bash
+# Clone este repositório
+$ git clone https://github.com/anapaulabio/API-lavie
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd API-lavie
+
+# Instale as dependências
+$ npm install
+
+# Verifique se a senha do seu banco SQL, está igual ao da const DB_PASS no caminho
+$ src/database/config.js
+
+# Execute a aplicação em modo de desenvolvimento
+$ npm run dev
+
+# O servidor inciará na porta:3000 - acesse http://localhost:3000/
+
+```
+
+---
+
+
+ ## :file_folder:   Documentação da API La Vie 
+Para reprodução da documentação da API, inicie o Live Server no arquivo index.html da pasta /docs.
+<img src="./src/img/doc.png" alt="">
 
 ---
 
